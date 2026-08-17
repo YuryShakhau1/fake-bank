@@ -1,0 +1,8 @@
+services:
+  fake-bank:
+    image: ghcr.io/yuryshakhau1/fake-bank:latest
+    container_name: fake_bank
+    profiles:
+      - docker
+    ports:
+      - "${EXTERNAL_BANK_PORT}:${EXTERNAL_BANK_PORT}"
